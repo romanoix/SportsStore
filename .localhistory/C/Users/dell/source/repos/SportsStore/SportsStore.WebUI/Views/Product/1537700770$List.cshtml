@@ -1,0 +1,14 @@
+﻿@*@using SportsStore.Domain.Entities
+    @model IEnumerable<Product>*@
+@using SportsStore.WebUI.HtmlHelpers @*bez linijki też działa ale wywala bład.*@ 
+@model SportsStore.WebUI.Models.ProductListViewModel
+
+@{
+    ViewBag.Title = "Produkty";
+}
+
+<div class="btn-group float-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+</div>
+
+
