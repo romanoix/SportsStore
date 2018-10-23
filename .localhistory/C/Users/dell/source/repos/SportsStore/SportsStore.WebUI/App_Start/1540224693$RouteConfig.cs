@@ -20,18 +20,18 @@ namespace SportsStore.WebUI
                 );
             routes.MapRoute(null,
                 "Strona{page}",
-                new { controller = "Product", action = "List", category = (string)null },
-                new { page = @"\d+" }//chyba nie jest konieczne
+                new { controller = "Product", action = "List", category = (string)null, page = @"\d+" }
+                
                 );
 
-            routes.MapRoute(null,   
+            routes.MapRoute(null,
                 "{category}",
                 new { controller = "Product", action = "List", page = 1 }
                 );
             routes.MapRoute(null,
                 "{category}/Strona{page}",
-                new { controller = "Product", action = "List" },
-                new { page = @"\d+" }//chyba nie jest koniecze
+                new { controller = "Product", action = "List", page = @"\d+" }
+                
                 );
             routes.MapRoute(null, "{controller}/{action}");
         

@@ -24,7 +24,7 @@ namespace SportsStore.WebUI
                 new { page = @"\d+" }//chyba nie jest konieczne
                 );
 
-            routes.MapRoute(null,   
+            routes.MapRoute(null,
                 "{category}",
                 new { controller = "Product", action = "List", page = 1 }
                 );
